@@ -1,0 +1,42 @@
+.myBtn {
+  font-size: 28px;
+  box-shadow: -4px 4px 0 4px;
+  border-radius: 30px;
+  height: 54px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.myBtn:disabled {
+  background: linear-gradient(to right, var(--grey), transparent) var(--grey);
+  color: white;
+}
+
+.myBtn:disabled {
+  background: linear-gradient(to right, var(--grey), transparent) var(--grey);
+  color: white;
+}
+
+.myBtn-yel {
+  background: linear-gradient(to right, var(--yel), transparent) var(--yel);
+}
+
+.myBtn-yel:hover:enabled {
+  background: linear-gradient(to right, var(--yel), transparent) var(--pink);
+}
+
+.myBtn-oran {
+  background: linear-gradient(to right, var(--oran), transparent) var(--oran);
+}
+
+.myBtn-oran:hover:enabled {
+  background: linear-gradient(to right, var(--oran), transparent) var(--blue);
+}
+
+.myBtn-blue {
+  background: linear-gradient(to right, var(--blue), transparent) var(--blue);
+}
+
+.myBtn-blue:hover:enabled {
+  background: linear-gradient(to right, var(--blue), transparent) var(--pink);
+}

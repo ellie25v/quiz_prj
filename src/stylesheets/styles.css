@@ -1,0 +1,89 @@
+@import "/src/stylesheets/normalize.css";
+
+:root {
+  --font-color: #1e1e1e;
+  --dark-grey: #646464;
+  --grey: #828282;
+  --light-grey: #D7D7D7;
+  --yel: #FBCC4C;
+  --oran: #E46F38;
+  --pink: #DE779D;
+  --blue: #87A2FF;
+  --white: #f6f6f6;
+  --rad: 0.7rem;
+  --dur: 0.3s;
+  --height: 66px;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  --gradient: linear-gradient(to right, #FBCC4C, #DE779D)
+}
+
+html {
+  box-sizing: border-box;
+}
+
+textarea:focus, input:focus, select:focus{
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+button {
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1 {
+  font-weight: 700;
+  font-family: "Alumni Sans", sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--font-color);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section {
+  width: 100%;
+  padding: 90px 20px 0;
+}
+
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 100px 30px 0;
+  }
+
+}
