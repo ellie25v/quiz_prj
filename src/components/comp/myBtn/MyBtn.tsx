@@ -26,7 +26,7 @@ const MyBtn: React.FC<MyBtnProps> = ({
       onClick={handleClick}
       disabled={disabled}
     >
-      <span>{text}</span>
+      {text}
       {icon && <img className="myBtn__icon" src={icon} alt="btn icon" />}
     </button>
   );

@@ -11,7 +11,12 @@ import icon4 from "../../assets/start/round_icon.svg";
 import icon5 from "../../assets/start/round_icon_bl.svg";
 import "./start.css";
 
-const Start = ({ moveNext }: { moveNext: () => void }) => {
+interface StartProps {
+  moveNext: () => void;
+  splashDur: number;
+}
+
+const Start:React.FC<StartProps>  = ({ moveNext, splashDur }) => {
   const iconsRef = useRef<HTMLUListElement | null>(null);
 
   useEffect(() => {
@@ -28,14 +33,18 @@ const Start = ({ moveNext }: { moveNext: () => void }) => {
         icon.style.setProperty("--y", `${y}px`);
       });
     }
+    const timeoutId = setTimeout(() => {
+      moveNext();
+    }, splashDur);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
     <div className="start__wrapper">
-      <div onClick={moveNext} className="start__img-wrapper">
+      <div style={{animationDuration: `${splashDur}ms`}} onClick={moveNext} className="start__img-wrapper">
         <ul className="start__icons-list" ref={iconsRef}>
           {Array.from({ length: 50 }).map((_, i) => (
-            <li key={i}>
+            <li style={{animationDuration: `${splashDur}ms`}} key={i}>
               <img
                 className="start__icon"
                 src={

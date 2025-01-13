@@ -1,6 +1,6 @@
 import React from "react";
-import { QuestionType } from "./answersModel";
-import del from "../../../assets/delete.svg";
+import { QuestionType } from "../../questionModel";
+import del from "../../../../assets/delete.svg";
 
 interface MultipleChoiceProps {
   id: number;

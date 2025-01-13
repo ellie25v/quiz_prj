@@ -1,20 +1,19 @@
 .myBtn {
   font-size: 28px;
-  box-shadow: -4px 4px 0 4px;
+  border: none;
+  box-shadow: -4px 4px 0 4px #000;
   border-radius: 30px;
   height: 54px;
   cursor: pointer;
   transition: background-color 1s;
+  font-weight: 600;
+  line-height: 0;
 }
 
 .myBtn:disabled {
   background: linear-gradient(to right, var(--grey), transparent) var(--grey);
-  color: white;
-}
-
-.myBtn:disabled {
-  background: linear-gradient(to right, var(--grey), transparent) var(--grey);
-  color: white;
+  color: #000;
+  cursor: default;
 }
 
 .myBtn-yel {

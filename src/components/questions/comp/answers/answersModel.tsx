@@ -1,3 +1,5 @@
+import { QuestionType } from "../../questionModel";
+
 interface IAnswer {
   id: number;
   type: QuestionType;
@@ -16,7 +18,7 @@ export interface IMatchingAnswer extends IAnswer {
 
 // guess the letter
 export interface IGuessTheLetterAnswer extends IAnswer {
-  letter: string;
+  blank: string;
 }
 
 // fill in the blanks
@@ -30,11 +32,3 @@ export type Answer =
   | IGuessTheLetterAnswer
   | IFillInTheBlanksAnswer;
 
-// Question Type Enum
-export enum QuestionType {
-  MULTIPLE_CHOICE = "multiple-choice",
-  SINGLE_CHOICE = "single-choice",
-  GUESS_THE_LETTER = "guess-the-letter",
-  MATCHING = "matching",
-  FILL_IN_THE_BLANKS = "fill-in-the-blanks",
-}

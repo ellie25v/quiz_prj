@@ -1,0 +1,14 @@
+.restoreModal__wrapper{
+    margin-top: 20px;
+}
+
+.restoreModal__text {
+    text-align: center;
+    margin: 6px 0;
+}
+
+.restoreModal__btnWarpper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+}

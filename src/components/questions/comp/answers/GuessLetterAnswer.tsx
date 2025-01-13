@@ -1,5 +1,5 @@
 import React from "react";
-import del from "../../../assets/delete.svg";
+import del from "../../../../assets/delete.svg";
 
 interface GuessLetterProps {
   id: number;

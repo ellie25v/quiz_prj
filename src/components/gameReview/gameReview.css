@@ -1,0 +1,38 @@
+.gameReview__player {
+  background: var(--blue);
+  border-radius: 20px;
+  width: 500px;
+  padding: 20px 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.gameReview__details {
+  width: 968px;
+}
+
+.gameReview__details .list-item {
+  cursor: auto;
+}
+
+.gameReview__details .list-item:hover{
+    transform: translate(0);
+}
+
+.gameReview__details .list-item span,
+.gameReview__player-name {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.gameReview__timer {
+  margin: 40px 0;
+}
+
+.gameReview__timer p,  .gameReview__missing{
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+}

@@ -15,7 +15,13 @@
   --height: 66px;
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
-  --gradient: linear-gradient(to right, #FBCC4C, #DE779D)
+  /* --gradient: linear-gradient(to right, #FBCC4C, #DE779D); */
+  --grad1: linear-gradient(45deg, var(--oran), var(--yel));
+  --grad2: linear-gradient(45deg, #f799bc, #e97c49ee);
+  --grad3: linear-gradient(45deg, var(--blue), var(--pink));
+  --grad4: linear-gradient(45deg, var(--oran), var(--blue));
+  --grad5: linear-gradient(45deg, var(--yel), var(--pink));
+  --grad6: linear-gradient(45deg, var(--yel), var(--blue));
 }
 
 html {
@@ -75,15 +81,95 @@ ul {
   list-style-type: none;
 }
 
+
 .section {
-  width: 100%;
-  padding: 90px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 160px);
 }
 
 
-@media (min-width: 1200px) {
-  .section {
-    padding: 100px 30px 0;
-  }
+.section__title {
+  text-align: center;
+  font-size: 100px;
+  margin: 20px 0;
+}
 
+.list-wrapper {
+  width: 1000px;
+  background: #fff;
+  box-shadow: -4px 4px 10px #939393;
+  border-radius: 20px;
+  scroll-behavior: smooth;
+  max-height: 400px;
+  padding: 0px 16px 16px;
+  overflow: scroll;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: var(--grad1);
+  border-radius: 20px;
+  font-weight: 500;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.list-item:hover{
+  transform: scale(1.007);
+}
+
+.list-item p, .list-item h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.list-item div {
+  width: 35%;
+  display: flex;
+}
+
+.list-item h3 {
+  margin-left: 8px;
+}
+
+.btn-wrapper{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hint {
+  margin-top: 4px;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.item-part {
+  width: 35%;
+  text-align: right;
+}
+
+.myIcon {
+  width: 20px;
+}
+
+.list-item:nth-child(5n + 2) {
+  background: var(--grad2);
+}
+
+.list-item:nth-child(5n + 3) {
+  background: var(--grad3);
+}
+
+.list-item:nth-child(5n + 4) {
+  background: var(--grad4);
+}
+
+.list-item:nth-child(5n) {
+  background: var(--grad5);
 }

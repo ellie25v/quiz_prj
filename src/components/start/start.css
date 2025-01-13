@@ -12,7 +12,9 @@
   height: 426px;
   margin: 0 auto;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
+  animation-name: pulse;
+  animation-duration: 3s;
 }
 
 .start__header {
@@ -34,17 +36,17 @@
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.start__img-wrapper:hover .start__img.white {
-  transform: translate(-50%, -50%) scale(1.0)
-}
+/* .start__img-wrapper:hover .start__img.white {
+  transform: translate(-50%, -50%) scale(1);
+} */
 
 .start__img.border {
   transform: translate(-54%, -54%) scale(0.9);
 }
 
-.start__img-wrapper:hover .start__img.border {
-  transform: translate(-54%, -54%) scale(1.0)
-}
+/* .start__img-wrapper:hover .start__img.border {
+  transform: translate(-54%, -54%) scale(1);
+} */
 
 .start__img.loudspeaker {
   width: 170px;
@@ -53,52 +55,75 @@
   transform: rotate(-23deg) scale(0.9);
 }
 
-.start__img-wrapper:hover .start__img.loudspeaker {
+/* .start__img-wrapper:hover .start__img.loudspeaker {
   transform: rotate(-23deg) scale(1);
   top: -8%;
   left: 85%;
+} */
+
+.start__icons-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* / */
-.start__icons-list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  /* Style for each icon */
-  .start__icons-list li {
-    list-style-type: none;
-    opacity: 0; /* Initially hidden */
-    transform: scale(0) translate(0, 0);
-    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
-  }
-  
-  /* Icon burst animation on hover */
-  .start__img-wrapper:hover .start__icons-list li {
+.start__icons-list li {
+  list-style-type: none;
+  opacity: 1;
+  transform: scale(0) translate(0, 0);
+  transition: opacity 3s ease, transform 1s ease;
+  animation-name: burst;
+  animation-duration: 3s;
+}
+
+/* .start__img-wrapper:hover .start__icons-list li {
     opacity: 1;
     transform: scale(1) translate(var(--x), var(--y));
+  } */
+
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: scale(0) translate(0, 0);
   }
-  
-  /* Keyframe for the burst animation */
-  @keyframes burst {
-    0% {
-      opacity: 1;
-      transform: scale(0) translate(0, 0);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1) translate(var(--x), var(--y));
-    }
+  70% {
+    opacity: 0.8;
   }
-  
-  /* SVG icon definitions (Hidden in this case) */
-  .start__icon {
-    width: 20px;
+  99% {
+    opacity: 0;
   }
- 
+  100% {
+    opacity: 0;
+    transform: scale(1) translate(var(--x), var(--y));
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.start__icon {
+  width: 20px;
+}

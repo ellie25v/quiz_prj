@@ -1,0 +1,138 @@
+.gameplay__question {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.gameplay__question p {
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
+}
+
+.gameplay__question .gameplay__instruction {
+  font-size: 24px;
+}
+
+/* answers */
+
+.answers__singMult-list {
+  display: flex;
+  max-width: 80%;
+  margin: 30px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answers__singMult-item, .answers__matching-item {
+  padding: 10px 15px;
+  background: var(--grad1);
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 20%;
+  height: 166px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.answers__singMult-item.selected, .answers__matching-item.clicked {
+  /* transform: translate(6px, -6px); */
+  box-shadow:
+  0 0 0 4px black;
+}
+
+.answers__singMult-item:hover, .answers__matching-item.clicked:hover {
+  transform: translate(6px, -6px);
+}
+
+.blank-answer__input{
+  width: 80%;
+  margin-left: 14px;
+  height: 40px;
+  padding: 8px;
+  border: none;
+  box-shadow: -4px 4px 7px #00000040;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.blank-answer__input.correct, .answers__matching-item.correct{
+  box-shadow:
+    0 0 0 4px var(--white),
+    0 0 0 8px var(--blue);
+}
+
+.blank-answer__input.incorrect, .answers__matching-item.incorrect{
+  box-shadow:
+    0 0 0 4px var(--white),
+    0 0 0 8px var(--oran);
+}
+
+.answers__matching-item{
+  background: var(--light-grey);
+}
+
+.answers__singMult-item:nth-child(2n), .matching-2 {
+  background: var(--grad3);
+}
+
+.answers__singMult-item:nth-child(4n) {
+  background: var(--grad4);
+}
+
+.matching-3 {
+  background: var(--grad6);
+}
+
+
+.answers__singMult-item:nth-child(3n), .matching-4 {
+  background: var(--grad5);
+}
+
+.answers__blank-list{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.blank-answer__label{
+  width: 40%;
+  margin: 10px;
+}
+
+ .matching-1 {
+  background: var(--grad1);
+}
+
+
+.answers__singMult-item.correct {
+  background: var(--blue);
+  box-shadow:
+    0 0 0 4px var(--white),
+    0 0 0 8px var(--blue);
+}
+
+.answers__singMult-item.correct.selected {
+  background: var(--blue);
+  /* box-shadow:
+    0 0 0 4px var(--white),
+    0 0 0 8px var(--blue); */
+
+  box-shadow:
+    0 0 0 4px black,
+    0 0 0 8px var(--blue);
+}
+
+.answers__singMult-item.incorrect {
+  background: var(--oran);
+}

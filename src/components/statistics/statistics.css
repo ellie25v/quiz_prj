@@ -1,0 +1,15 @@
+.statistics__container{
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.statistics__qList-wrapper{
+    max-height: 500px;
+}
+
+.statistics__qList-item{
+    cursor: auto;
+}
+.statistics__qList-item:hover{
+    transform: translate(0);
+}

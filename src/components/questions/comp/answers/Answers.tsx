@@ -1,5 +1,6 @@
 import React from "react";
-import { Answer, QuestionType } from "./answersModel";
+import { Answer } from "./answersModel";
+import { QuestionType } from "../../questionModel";
 import MultipleChoiceAnswer from "./MultipleChoiceAnswer";
 import MatchingAnswer from "./MatchingAnswer";
 import GuessLetterAnswer from "./GuessLetterAnswer";
@@ -57,12 +58,12 @@ const Answers: React.FC<AnswersProps> = ({
         break;
 
       case QuestionType.GUESS_THE_LETTER:
-        if ("letter" in answer) {
+        if ("blank" in answer) {
           return (
             <GuessLetterAnswer
               key={answer.id}
               id={answer.id}
-              letter={answer.letter}
+              letter={answer.blank}
               onChange={(id, value) => onChange(id, "letter", value)}
               onRemove={onRemove}
             />
@@ -94,13 +95,16 @@ const Answers: React.FC<AnswersProps> = ({
       <ul className="answers__section">
         {answers.map((answer) => renderAnswer(answer))}
       </ul>
-      {((type !== QuestionType.FILL_IN_THE_BLANKS &&
-        type !== QuestionType.GUESS_THE_LETTER &&
-        answers.length < 4) ||
+      {(answers.length < 4 && (type !== QuestionType.FILL_IN_THE_BLANKS &&
+        type !== QuestionType.GUESS_THE_LETTER) ||
         (type === QuestionType.FILL_IN_THE_BLANKS &&
           questionBlanks > 0 &&
-          questionBlanks > answers.length) || (answers.length < 1 ||
-            type === QuestionType.GUESS_THE_LETTER)) && (
+          questionBlanks > answers.length) 
+          || (type === QuestionType.GUESS_THE_LETTER &&
+            questionBlanks > 0 &&
+            questionBlanks > answers.length) 
+          ) 
+            && (
         <button className="answers__add-btn" type="button" onClick={addAnswer}>
           +
         </button>

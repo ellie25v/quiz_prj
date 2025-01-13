@@ -1,0 +1,41 @@
+.questions__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.q_delete {
+  cursor: pointer;
+}
+
+.q_delete:hover {
+  transform: scale(1.1);
+}
+
+.questions__btn-wrapper {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+}
+
+
+/* import */
+.import_warning {
+  margin: 20px 0px 10px;
+  text-align: center;
+}
+
+.import_textarea {
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.import_errors {
+  margin-bottom: 15px;
+  color: red;
+}
